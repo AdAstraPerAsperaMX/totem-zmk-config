@@ -21,7 +21,7 @@ layers:
   - {t: E, h: RCTRL}
   - {t: I, h: RALT}
   - {t: O, h: RGUI}
-  - '['
+  - ''''
   - Z
   - X
   - C
@@ -32,13 +32,13 @@ layers:
   - ','
   - .
   - /
-  - ']'
-  - ESC
+  - '-'
+  - DEL
   - {t: BSPC, h: code}
   - {t: TAB, h: mod}
   - {t: ENTER, h: adj}
   - {t: SPACE, h: nav}
-  - LSHFT
+  - {t: LGUI, h: sticky}
   code:
   - '`'
   - '@'
