@@ -33,7 +33,7 @@ layers:
   - .
   - /
   - ''''
-  - DEL
+  - {t: DEL, h: fn2}
   - {t: BSPC, h: code}
   - {t: TAB, h: mod}
   - {t: ENTER, h: adj}
@@ -43,23 +43,23 @@ layers:
   - '`'
   - '@'
   - '#'
-  - ''''
-  - '"'
+  - '{'
+  - '}'
   - /
   - '7'
   - '8'
   - '9'
   - '*'
-  - '['
+  - {t: '[', h: LGUI}
   - {t: ']', h: LALT}
-  - {t: (, h: LSHFT}
-  - {t: ), h: LCTRL}
+  - {t: (, h: LCTRL}
+  - {t: ), h: LSHFT}
   - _
   - '-'
-  - {t: '4', h: RCTRL}
-  - {t: '5', h: RSHFT}
+  - {t: '4', h: RSHFT}
+  - {t: '5', h: RCTRL}
   - {t: '6', h: RALT}
-  - +
+  - {t: +, h: RGUI}
   - ^
   - '&'
   - '|'
@@ -88,17 +88,17 @@ layers:
   - HOME
   - UP
   - END
-  - DEL
+  - {t: ▽, type: trans}
   - '&msc SCRL_LEFT'
   - '&mmv MOVE_LEFT'
   - '&mmv MOVE_DOWN'
   - '&mmv MOVE_RIGHT'
   - '&msc SCRL_RIGHT'
   - PG DN
-  - LEFT
-  - DOWN
-  - RIGHT
-  - INS
+  - {t: LEFT, h: RSHFT}
+  - {t: DOWN, h: RCTRL}
+  - {t: RIGHT, h: RALT}
+  - RGUI
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&msc SCRL_DOWN'
@@ -108,8 +108,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - PSCRN
-  - UNDO
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LSHFT
@@ -119,7 +119,7 @@ layers:
   - {t: ▽, type: trans}
   mod:
   - '&mac_lock'
-  - '&win_lock'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -127,11 +127,11 @@ layers:
   - PP
   - NEXT
   - BRI UP
-  - {t: ▽, type: trans}
-  - CAPS
+  - VOL UP
+  - {t: LGUI, h: sticky}
   - {t: LALT, h: sticky}
-  - {t: LSHFT, h: sticky}
   - {t: LCTRL, h: sticky}
+  - {t: LSHFT, h: sticky}
   - {t: ▽, type: trans}
   - BSPC
   - DEL
@@ -139,23 +139,23 @@ layers:
   - ENTER
   - TAB
   - {t: ▽, type: trans}
+  - CAPS
+  - '&win_lock'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - VOL DN
-  - MUTE
-  - VOL UP
+  - {t: ▽, type: trans}
   - BRI DN
-  - {t: ▽, type: trans}
+  - VOL DN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - MUTE
   adj:
   - '&studio_unlock'
   - F7
@@ -166,33 +166,72 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - BT CLR ALL
   - {t: ▽, type: trans}
-  - F4
-  - F5
-  - F6
+  - {t: LGUI, h: sticky}
+  - {t: F4, h: LALT}
+  - {t: F5, h: LCTRL}
+  - {t: F6, h: LSHFT}
   - F11
   - {t: ▽, type: trans}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '&bootloader'
+  - '&sys_reset'
   - F1
   - F2
   - F3
   - F10
   - {t: ▽, type: trans}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - BT CLR
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  fn2:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F19
+  - F20
+  - F21
+  - F24
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F16
+  - F17
+  - F18
+  - F23
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F13
+  - F14
+  - F15
+  - F22
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
