@@ -21,7 +21,7 @@ layers:
   - {t: E, h: RCTRL}
   - {t: I, h: RALT}
   - {t: O, h: RGUI}
-  - ''''
+  - '-'
   - Z
   - X
   - C
@@ -32,7 +32,7 @@ layers:
   - ','
   - .
   - /
-  - '-'
+  - ''''
   - DEL
   - {t: BSPC, h: code}
   - {t: TAB, h: mod}
