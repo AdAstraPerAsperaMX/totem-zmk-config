@@ -20,6 +20,8 @@
             require-prior-idle-ms = <300>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 35 36 37>;
+            hold-trigger-on-release;
         };
 
         hmr: homerow_mods_right {
@@ -30,6 +32,8 @@
             require-prior-idle-ms = <300>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34>;
+            hold-trigger-on-release;
         };
 
         td_bs_pipe: backslash_pipe {
@@ -101,8 +105,8 @@
             bindings = <
           &kp Q        &kp W        &kp F         &kp P         &kp G        &kp J        &kp L         &kp U         &kp Y        &kp SEMI
           &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &kp D        &kp H        &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I  &hmr RGUI O
-&kp LBKT  &kp Z        &kp X        &kp C         &kp V         &kp B        &kp K        &kp M         &kp COMMA     &kp DOT      &kp FSLH     &kp RBKT
-                                    &kp ESC       &lt 1 BSPC    &lt 3 TAB    &lt 4 ENTER  &lt 2 SPACE   &kp LSHFT
+&kp SQT   &kp Z        &kp X        &kp C         &kp V         &kp B        &kp K        &kp M         &kp COMMA     &kp DOT      &kp FSLH     &kp MINUS
+                                    &kp DEL       &lt 1 BSPC    &lt 3 TAB    &lt 4 ENTER  &lt 2 SPACE   &sk LGUI
             >;
         };
 
