@@ -1,0 +1,16 @@
+name: Draw ZMK keymaps
+on:
+  workflow_dispatch:  # Allows you to trigger it manually
+  push:               # Automatically runs when you save in Keymap Editor
+    paths:
+      - "config/*.keymap"
+      - "config/*.dtsi"
+
+jobs:
+  draw:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write  # Allows the action to save the SVG back to your repo
+    with:
+      keymap_patterns: "config/*.keymap"   
+      output_folder: "keymap-drawer"       # The folder where the SVGs will be saved
