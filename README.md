@@ -1,6 +1,6 @@
 # Totem ZMK Configuration
 
-Custom ZMK firmware configuration for the [GEIGEIGEIST Totem](https://github.com/GEIGEIGEIST/totem) split keyboard with **Dual battery monitor and ZMK Studio support**.
+Custom ZMK firmware configuration for the [GEIGEIGEIST Totem](https://github.com/GEIGEIGEIST/totem) split keyboard with **dual battery monitoring and ZMK Studio support**.
 
 ## Features
 
@@ -30,7 +30,7 @@ Navigation and mouse control layer with arrow keys, page navigation, and mouse m
 System controls including media keys, screen lock macros, and brightness/volume controls.
 
 ### ADJ
-Function keys, Bluetooth device switching, and ZMK Studio unlock.
+Function keys and ZMK Studio unlock.
 
 ## Keymap Visualization
 
@@ -45,6 +45,14 @@ Function keys, Bluetooth device switching, and ZMK Studio unlock.
 5. Download firmware from Actions artifacts
 6. Flash `totem_left-seeeduino_xiao_ble-zmk.uf2` to left half
 7. Flash `totem_right-seeeduino_xiao_ble-zmk.uf2` to right half
+
+## ZMK Studio
+
+This config enables ZMK Studio on the central half only:
+
+- Plug in the **left** half over USB when using Studio
+- Use the `&studio_unlock` key on the `ADJ` layer before connecting
+- Make sure the keyboard output is set to USB when connecting with Studio over USB
 
 ## Hardware
 
