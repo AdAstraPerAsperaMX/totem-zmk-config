@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/modifiers.h>
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -29,118 +30,11 @@
             bindings = <&mo>, <&kp>;
         };
 
-        u_bt_sel_0: u_bt_sel_0 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0>, <&u_macro_u_bt_sel_0>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        u_bt_sel_1: u_bt_sel_1 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1>, <&u_macro_u_bt_sel_1>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        u_bt_sel_2: u_bt_sel_2 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2>, <&u_macro_u_bt_sel_2>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        u_bt_sel_3: u_bt_sel_3 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3>, <&u_macro_u_bt_sel_3>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        u_out_tog: u_out_tog {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&out OUT_TOG>, <&out OUT_USB>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
         u_caps_word: u_caps_word {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&caps_word>, <&kp CAPS>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        u_rgb_tog: u_rgb_tog {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_TOG>, <&rgb_ug RGB_OFF>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        u_rgb_eff: u_rgb_eff {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_EFF>, <&rgb_ug RGB_EFR>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        u_rgb_hui: u_rgb_hui {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        u_rgb_sai: u_rgb_sai {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_SAD>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        u_rgb_bri: u_rgb_bri {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        u_ep_tog: u_ep_tog {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&ext_power EP_TOG>, <&ext_power EP_OFF>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-    };
-
-    macros {
-        u_macro_u_bt_sel_0: u_macro_u_bt_sel_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            bindings = <&bt BT_SEL 0 &bt BT_CLR>;
-        };
-
-        u_macro_u_bt_sel_1: u_macro_u_bt_sel_1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            bindings = <&bt BT_SEL 1 &bt BT_CLR>;
-        };
-
-        u_macro_u_bt_sel_2: u_macro_u_bt_sel_2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            bindings = <&bt BT_SEL 2 &bt BT_CLR>;
-        };
-
-        u_macro_u_bt_sel_3: u_macro_u_bt_sel_3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            bindings = <&bt BT_SEL 3 &bt BT_CLR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
