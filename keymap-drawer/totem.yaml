@@ -21,7 +21,7 @@ layers:
   - {t: E, h: LCTRL}
   - {t: I, h: LALT}
   - {t: O, h: LGUI}
-  - Q
+  - ''
   - Z
   - {t: X, h: RALT}
   - C
@@ -32,7 +32,7 @@ layers:
   - ','
   - {t: ., h: RALT}
   - /
-  - ''''
+  - ''
   - {t: ESC, h: trade}
   - {t: ␣, h: nav}
   - {t: TAB, h: mouse}
@@ -65,13 +65,13 @@ layers:
   - RALT
   - {t: num, h: toggle}
   - {t: nav, h: toggle}
-  - ''
   - INS
   - HOME
   - PG DN
   - PG UP
   - END
   - UNDO
+  - ''
   - ''
   - {type: held}
   - ''
@@ -105,12 +105,12 @@ layers:
   - {t: sym, h: toggle}
   - {t: mouse, h: toggle}
   - ''
-  - ''
   - WH←
   - WH↓
   - WH↑
   - WH→
   - UNDO
+  - ''
   - ''
   - ''
   - {type: held}
@@ -144,11 +144,11 @@ layers:
   - {t: fun, h: toggle}
   - {t: trade, h: toggle}
   - ''
-  - ''
   - F21
   - F22
   - F23
   - F24
+  - ''
   - ''
   - {type: held}
   - ''
@@ -177,16 +177,16 @@ layers:
   - LCTRL
   - LALT
   - LGUI
-  - '['
+  - ''
   - '`'
   - '1'
   - '2'
   - '3'
   - \
-  - ''
   - {t: num, h: toggle}
   - {t: nav, h: toggle}
   - RALT
+  - ''
   - ''
   - ''
   - .
@@ -216,16 +216,16 @@ layers:
   - LCTRL
   - LALT
   - LGUI
-  - '{'
+  - ''
   - '~'
   - '!'
   - '@'
   - '#'
   - '|'
-  - ''
   - {t: sym, h: toggle}
   - {t: mouse, h: toggle}
   - RALT
+  - ''
   - ''
   - ''
   - (
@@ -255,16 +255,16 @@ layers:
   - LCTRL
   - LALT
   - LGUI
-  - F12
+  - ''
   - F10
   - F1
   - F2
   - F3
   - PAUSE BREAK
-  - ''
   - {t: fun, h: toggle}
   - {t: trade, h: toggle}
   - RALT
+  - ''
   - ''
   - ''
   - APP

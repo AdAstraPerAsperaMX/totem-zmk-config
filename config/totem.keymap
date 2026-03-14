@@ -151,7 +151,7 @@
             bindings = <
                 &kp Q              &kp W              &kp F              &kp P              &kp G              &kp J              &kp L              &kp U              &kp Y              &kp SQT
                 &u_mt LGUI A       &u_mt LALT R       &u_mt LCTRL S      &u_mt LSHFT T      &kp D              &kp H              &u_mt LSHFT N      &u_mt LCTRL E      &u_mt LALT I       &u_mt LGUI O
-                &kp Q              &kp Z              &u_mt RALT X       &kp C              &kp V              &kp B              &kp K              &kp M              &kp COMMA          &u_mt RALT DOT     &kp SLASH          &kp SQT
+                &none              &kp Z              &u_mt RALT X       &kp C              &kp V              &kp B              &kp K              &kp M              &kp COMMA          &u_mt RALT DOT     &kp SLASH          &none
                                                        &u_lt TRADE ESC    &u_lt NAV SPACE    &u_lt MOUSE TAB    &u_lt SYM RET      &u_lt NUM BSPC     &u_lt FUN DEL
             >;
         };
@@ -160,7 +160,7 @@
             bindings = <
                 &none              &none              &none              &to BASE           &none              &kp AGAIN          &kp LS(INS)        &kp LC(INS)        &kp LS(DEL)        &kp UNDO
                 &kp LGUI           &kp LALT           &kp LCTRL          &kp LSHFT          &none              &u_caps_word       &kp LEFT           &kp DOWN           &kp UP             &kp RIGHT
-                &none              &none              &kp RALT           &to NUM            &to NAV            &none              &kp INS            &kp HOME           &kp PG_DN          &kp PG_UP          &kp END            &kp UNDO
+                &none              &none              &kp RALT           &to NUM            &to NAV            &kp INS            &kp HOME           &kp PG_DN          &kp PG_UP          &kp END            &kp UNDO           &none
                                                        &none              &none              &none              &kp RET            &kp BSPC           &kp DEL
             >;
         };
@@ -169,7 +169,7 @@
             bindings = <
                 &none              &none              &none              &to BASE           &bootloader        &kp AGAIN          &kp LS(INS)        &kp LC(INS)        &kp LS(DEL)        &kp UNDO
                 &kp LGUI           &kp LALT           &kp LCTRL          &kp LSHFT          &none              &none              &mmv MOVE_LEFT     &mmv MOVE_DOWN     &mmv MOVE_UP       &mmv MOVE_RIGHT
-                &none              &none              &kp RALT           &to SYM            &to MOUSE          &none              &none              &msc SCRL_LEFT     &msc SCRL_DOWN     &msc SCRL_UP       &msc SCRL_RIGHT    &kp UNDO
+                &none              &none              &kp RALT           &to SYM            &to MOUSE          &none              &msc SCRL_LEFT     &msc SCRL_DOWN     &msc SCRL_UP       &msc SCRL_RIGHT    &kp UNDO           &none
                                                        &none              &none              &none              &mkp MB2           &mkp MB1           &mkp MB3
             >;
         };
@@ -178,7 +178,7 @@
             bindings = <
                 &none              &none              &none              &to BASE           &none              &none              &kp F13            &kp F14            &kp F15            &kp F16
                 &kp LGUI           &kp LALT           &kp LCTRL          &kp LSHFT          &none              &none              &kp F17            &kp F18            &kp F19            &kp F20
-                &none              &none              &kp RALT           &to FUN            &to TRADE          &none              &none              &kp F21            &kp F22            &kp F23            &kp F24            &none
+                &none              &none              &kp RALT           &to FUN            &to TRADE          &none              &kp F21            &kp F22            &kp F23            &kp F24            &none              &none
                                                        &none              &none              &none              &none              &none              &none
             >;
         };
@@ -187,7 +187,7 @@
             bindings = <
                 &kp LBKT           &kp N7             &kp N8             &kp N9             &kp RBKT           &none              &to BASE           &none              &none              &none
                 &kp SEMI           &kp N4             &kp N5             &kp N6             &kp EQUAL          &none              &kp LSHFT          &kp LCTRL          &kp LALT           &kp LGUI
-                &kp LBKT           &kp GRAVE          &kp N1             &kp N2             &kp N3             &kp BSLH           &none              &to NUM            &to NAV            &kp RALT           &none              &none
+                &none              &kp GRAVE          &kp N1             &kp N2             &kp N3             &kp BSLH           &to NUM            &to NAV            &kp RALT           &none              &none              &none
                                                        &kp DOT            &kp N0             &kp MINUS          &none              &none              &none
             >;
         };
@@ -196,7 +196,7 @@
             bindings = <
                 &kp LBRC           &kp AMPS           &kp ASTRK          &kp LPAR           &kp RBRC           &none              &to BASE           &none              &none              &none
                 &kp COLON          &kp DLLR           &kp PRCNT          &kp CARET          &kp PLUS           &none              &kp LSHFT          &kp LCTRL          &kp LALT           &kp LGUI
-                &kp LBRC           &kp TILDE          &kp EXCL           &kp AT             &kp HASH           &kp PIPE           &none              &to SYM            &to MOUSE          &kp RALT           &none              &none
+                &none              &kp TILDE          &kp EXCL           &kp AT             &kp HASH           &kp PIPE           &to SYM            &to MOUSE          &kp RALT           &none              &none              &none
                                                        &kp LPAR           &kp RPAR           &kp UNDER          &none              &none              &none
             >;
         };
@@ -205,7 +205,7 @@
             bindings = <
                 &kp F12            &kp F7             &kp F8             &kp F9             &kp PSCRN          &bootloader        &to BASE           &none              &none              &none
                 &kp F11            &kp F4             &kp F5             &kp F6             &kp SLCK           &none              &kp LSHFT          &kp LCTRL          &kp LALT           &kp LGUI
-                &kp F12            &kp F10            &kp F1             &kp F2             &kp F3             &kp PAUSE_BREAK    &none              &to FUN            &to TRADE          &kp RALT           &none              &none
+                &none              &kp F10            &kp F1             &kp F2             &kp F3             &kp PAUSE_BREAK    &to FUN            &to TRADE          &kp RALT           &none              &none              &none
                                                        &kp K_APP          &kp SPACE          &kp TAB            &none              &none              &none
             >;
         };
