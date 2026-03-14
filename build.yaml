@@ -1,7 +1,8 @@
 include:
   - board: seeeduino_xiao_ble
     shield: totem_left
-    snippet: studio-rpc-usb-uart
+    # Uncomment to enable ZMK Studio on the central half.
+    # snippet: studio-rpc-usb-uart
   - board: seeeduino_xiao_ble
     shield: totem_right
   - board: seeeduino_xiao_ble

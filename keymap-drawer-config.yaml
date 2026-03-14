@@ -7,10 +7,22 @@ parse_config:
     # Mouse
     '&mkp LCLK': '🖱L'
     '&mkp RCLK': '🖱R'
+    '&mkp MB1': '🖱L'
+    '&mkp MB2': '🖱R'
+    '&mkp MB3': '🖱M'
     '&mkp MB4': '◁'
     '&mkp MB5': '▷'
+    '&msc SCRL_UP': 'WH↑'
+    '&msc SCRL_DOWN': 'WH↓'
+    '&msc SCRL_LEFT': 'WH←'
+    '&msc SCRL_RIGHT': 'WH→'
+    '&mmv MOVE_UP': 'MS↑'
+    '&mmv MOVE_DOWN': 'MS↓'
+    '&mmv MOVE_LEFT': 'MS←'
+    '&mmv MOVE_RIGHT': 'MS→'
     
     # Media
+    '&kp C_STOP': '⏹'
     '&kp C_VOL_UP': 'ᐱ🔊'
     '&kp C_VOL_DN': 'ᐯ🔉'
     '&kp C_MUTE': '🔇'
@@ -22,9 +34,18 @@ parse_config:
     
     # Modifiers
     '&kp ENTER': '⮐'
+    '&kp RET': '⮐'
     '&kp LSHFT': '⇧'
     '&kp BSPC': '⌫'
     '&kp SPACE': '␣'
+    '&kp K_APP': 'APP'
+    '&kp PAUSE_BREAK': 'PAUSE BREAK'
+    '&kp PSCRN': 'PSCRN'
+    '&kp AGAIN': 'AGAIN'
+    '&kp UNDO': 'UNDO'
+    '&kp LC(INS)': 'Ctl+INS'
+    '&kp LS(INS)': 'Sft+INS'
+    '&kp LS(DEL)': 'Sft+DEL'
     
     # Locks
     '&mac_lock': '🔒Mac'
@@ -38,3 +59,15 @@ parse_config:
     '&bt BT_SEL 4': 'ᛒ4'
     '&bt BT_CLR': 'ᛒ✖'
     '&bt BT_CLR_ALL': 'ᛒ⌫'
+    '&u_bt_sel_0': {t: BT, h: '0', s: 'ᛒ✖'}
+    '&u_bt_sel_1': {t: BT, h: '1', s: 'ᛒ✖'}
+    '&u_bt_sel_2': {t: BT, h: '2', s: 'ᛒ✖'}
+    '&u_bt_sel_3': {t: BT, h: '3', s: 'ᛒ✖'}
+    '&u_out_tog': {t: OUT TOG, s: OUT USB}
+    '&u_caps_word': {t: '&caps_word', s: CAPS}
+    '&u_rgb_tog': {t: RGB TOG, s: RGB OFF}
+    '&u_rgb_eff': {t: RGB EFF, s: RGB EFR}
+    '&u_rgb_hui': {t: RGB HUI, s: RGB HUD}
+    '&u_rgb_sai': {t: RGB SAI, s: RGB SAD}
+    '&u_rgb_bri': {t: RGB BRI, s: RGB BRD}
+    '&u_ep_tog': {t: EP TOG, s: EP OFF}

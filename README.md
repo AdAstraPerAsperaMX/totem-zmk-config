@@ -1,36 +1,38 @@
 # Totem ZMK Configuration
 
-Custom ZMK firmware configuration for the [GEIGEIGEIST Totem](https://github.com/GEIGEIGEIST/totem) split keyboard with **dual battery monitoring and ZMK Studio support**.
+Custom ZMK firmware configuration for the [GEIGEIGEIST Totem](https://github.com/GEIGEIGEIST/totem) split keyboard with **dual battery monitoring**.
 
 ## Features
 
-- **Colemak-DH Matrix layout** optimized for ortholinear keyboards
+- **Miryoku Colemak layout** for the Totem 38-key split
 - **Dual battery monitoring** - Reports battery levels for both keyboard halves
-- **ZMK Studio unlock** for live keymap editing (not in original Totem config)
-- **5 layers** optimized for Python and JavaScript development
-- **Homerow mods** for comfortable modifier access
-- **Mouse support** with scroll and movement controls
-- **Combos** for quick access to ESC, dictation, and special characters
+- **Optional ZMK Studio support** that can be re-enabled if needed
+- **7-layer Miryoku stack**: Base, Nav, Mouse, Trade, Num, Sym, Fun
+- **Tap-preferred homerow mods** and layer-tap thumbs
+- **Mouse, media, Bluetooth, and output controls**
 
 ## Layers
 
-### BASE - Colemak-DH
-Main typing layer with homerow mods (GUI/Alt/Shift/Ctrl).
-
-### CODE
-Optimized symbol layer for Python/JavaScript:
-- Brackets `[]` `()` on homerow for easy access
-- Numbers arranged as numpad on right side
-- Frequently-used symbols (`_`, `@`, `#`, `"`, `'`) in comfortable positions
+### BASE
+Colemak alpha layer with homerow mods and Miryoku thumb keys.
 
 ### NAV
-Navigation and mouse control layer with arrow keys, page navigation, and mouse movements.
+Navigation, selection shortcuts, arrows, paging, and caps word.
 
-### MOD
-System controls including media keys, screen lock macros, and brightness/volume controls.
+### MOUSE
+Mouse movement, wheel controls, and mouse buttons.
 
-### ADJ
-Function keys and ZMK Studio unlock.
+### TRADE
+Dedicated right-hand function layer with `F13` through `F24`.
+
+### NUM
+Number pad style layer with brackets and arithmetic symbols.
+
+### SYM
+Primary symbol layer for programming punctuation.
+
+### FUN
+Function keys, print screen, pause, and app/menu key.
 
 ## Keymap Visualization
 
@@ -48,10 +50,13 @@ Function keys and ZMK Studio unlock.
 
 ## ZMK Studio
 
-This config enables ZMK Studio on the central half only:
+ZMK Studio is currently disabled to avoid the extra firmware overhead when it is not in use.
 
+To re-enable it later:
+
+- Uncomment `CONFIG_ZMK_STUDIO=y` in `config/totem.conf`
+- Uncomment `snippet: studio-rpc-usb-uart` for `totem_left` in `build.yaml`
 - Plug in the **left** half over USB when using Studio
-- Use the `&studio_unlock` key on the `ADJ` layer before connecting
 - Make sure the keyboard output is set to USB when connecting with Studio over USB
 
 ## Hardware
@@ -62,14 +67,10 @@ This config enables ZMK Studio on the central half only:
 
 ## Special Features
 
-### Combos
-- **Q + W:** ESC
-- **N + M:** Dictation (Alt+Space)
-- **U + Y:** ñ character
-
-### Macros
-- **Mac Lock:** Cmd+Ctrl+Q
-- **Win Lock:** Win+L
+### Layout
+- Miryoku Totem layout matching the rendered reference image
+- Shift-modified Bluetooth keys clear the selected profile
+- Shift-modified output toggle forces USB output
 
 ### Battery Monitoring
 Configured for split battery level reporting to support peripheral battery monitoring apps.
