@@ -17,10 +17,10 @@ layers:
   - {t: T, h: LSHFT}
   - D
   - H
-  - {t: N, h: LSHFT}
-  - {t: E, h: LCTRL}
-  - {t: I, h: LALT}
-  - {t: O, h: LGUI}
+  - {t: N, h: RSHFT}
+  - {t: E, h: RCTRL}
+  - {t: I, h: RALT}
+  - {t: O, h: RGUI}
   - ''
   - Z
   - {t: X, h: RALT}
