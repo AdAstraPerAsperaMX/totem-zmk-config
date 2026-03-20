@@ -100,7 +100,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp LGUI>, <&nav_home_pinky_tap>;
+            bindings = <&kp LGUI &nav_home_pinky_tap>;
         };
 
         nav_home_ring: nav_home_ring {
@@ -108,7 +108,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp LALT>, <&nav_home_ring_tap>;
+            bindings = <&kp LALT &nav_home_ring_tap>;
         };
 
         nav_home_middle: nav_home_middle {
@@ -116,7 +116,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp LCTRL>, <&nav_home_middle_tap>;
+            bindings = <&kp LCTRL &nav_home_middle_tap>;
         };
 
         nav_home_index: nav_home_index {
@@ -124,7 +124,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp LSHFT>, <&nav_home_index_tap>;
+            bindings = <&kp LSHFT &nav_home_index_tap>;
         };
     };
 
