@@ -1,11 +1,11 @@
 # Totem ZMK Configuration
 
-Custom ZMK firmware configuration for the [GEIGEIGEIST Totem](https://github.com/GEIGEIGEIST/totem) split keyboard with **dual battery monitoring**.
+Custom ZMK firmware configuration for the [GEIGEIGEIST Totem](https://github.com/GEIGEIGEIST/totem) split keyboard with split battery reporting enabled.
 
 ## Features
 
 - **Miryoku Colemak layout** for the Totem 38-key split
-- **Dual battery monitoring** - Reports battery levels for both keyboard halves
+- **Split battery reporting** - Central half fetches the peripheral battery level and proxies it to compatible hosts/apps
 - **Optional ZMK Studio support** that can be re-enabled if needed
 - **7-layer Miryoku stack**: Base, Nav, Mouse, Trade, Num, Sym, Fun
 - **Tap-preferred homerow mods** and layer-tap thumbs
@@ -73,7 +73,28 @@ To re-enable it later:
 - Shift-modified output toggle forces USB output
 
 ### Battery Monitoring
-Configured for split battery level reporting to support peripheral battery monitoring apps.
+Configured with ZMK split battery fetching and proxying so compatible hosts/apps can read both halves.
+
+Notes:
+
+- The left half is the split central and is the Bluetooth device that connects to the host.
+- Native host battery UIs often still show only one percentage even when split battery proxying is enabled.
+- To reliably see both halves, use a host app that reads the proxied split battery data instead of relying on the default macOS Bluetooth battery indicator.
+
+### macOS: Seeing Both Battery Levels
+
+On macOS, ZMK documents host support for multiple battery values as undefined, and notes that most hosts only show the main battery in the native UI.
+
+For macOS, the practical way to view both halves is to use a BLE battery utility that understands ZMK split battery proxying, such as `zmk-battery-center`.
+
+Recommended flow:
+
+1. Rebuild and flash both halves after this config change.
+2. Remove the existing Bluetooth pairing for the keyboard in macOS.
+3. Clear keyboard bonds with `BT_CLR_ALL`, then pair the keyboard again.
+4. Install and open `zmk-battery-center`.
+5. Grant the app Bluetooth permission in macOS if prompted.
+6. Confirm the app shows separate central and peripheral battery levels.
 
 ## Changing the Keyboard Name
 
