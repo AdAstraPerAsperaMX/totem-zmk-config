@@ -58,6 +58,74 @@
             bindings = <&caps_word>, <&kp CAPS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        nav_home_pinky_tap: nav_home_pinky_tap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp LC(N1)>
+                , <&kp LC(N5)>
+                ;
+        };
+
+        nav_home_ring_tap: nav_home_ring_tap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp LC(N2)>
+                , <&kp LC(N6)>
+                ;
+        };
+
+        nav_home_middle_tap: nav_home_middle_tap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp LC(N4)>
+                , <&kp LC(N8)>
+                ;
+        };
+
+        nav_home_index_tap: nav_home_index_tap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp LC(N3)>
+                , <&kp LC(N7)>
+                ;
+        };
+
+        nav_home_pinky: nav_home_pinky {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp LGUI>, <&nav_home_pinky_tap>;
+        };
+
+        nav_home_ring: nav_home_ring {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp LALT>, <&nav_home_ring_tap>;
+        };
+
+        nav_home_middle: nav_home_middle {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp LCTRL>, <&nav_home_middle_tap>;
+        };
+
+        nav_home_index: nav_home_index {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp LSHFT>, <&nav_home_index_tap>;
+        };
     };
 
     keymap {
@@ -75,7 +143,7 @@
         nav_layer {
             bindings = <
                 &none              &none              &none              &to BASE           &none              &kp K_AGAIN        &kp LS(INS)        &kp LC(INS)        &kp LS(DEL)        &kp UNDO
-                &kp LGUI           &kp LALT           &kp LCTRL          &kp LSHFT          &none              &u_caps_word       &kp LEFT           &kp DOWN           &kp UP             &kp RIGHT
+                &nav_home_pinky    &nav_home_ring     &nav_home_middle   &nav_home_index    &none              &u_caps_word       &kp LEFT           &kp DOWN           &kp UP             &kp RIGHT
                 &none              &none              &kp RALT           &to NUM            &to NAV            &kp INS            &kp HOME           &kp PG_DN          &kp PG_UP          &kp END            &kp UNDO           &none
                                                        &none              &none              &none              &kp RET            &kp BSPC           &kp DEL
             >;
