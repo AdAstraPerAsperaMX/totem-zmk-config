@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+repo_root="$(git rev-parse --show-toplevel)"
+
+"$repo_root/scripts/render-keymap.sh"
+
+if ! git diff --quiet -- \
+  "$repo_root/keymap-drawer/totem.yaml" \
+  "$repo_root/keymap-drawer/totem.svg" \
+  "$repo_root/totem-keymap.svg"; then
+  echo "pre-push: regenerated keymap files differ from the checked-in versions." >&2
+  echo "pre-push: review them, then run 'git add keymap-drawer/totem.yaml keymap-drawer/totem.svg totem-keymap.svg' and commit." >&2
+  exit 1
+fi
+

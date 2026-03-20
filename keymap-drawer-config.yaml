@@ -65,6 +65,10 @@ parse_config:
     '&u_bt_sel_3': {t: BT, h: '3', s: 'ᛒ✖'}
     '&u_out_tog': {t: OUT TOG, s: OUT USB}
     '&u_caps_word': {t: '&caps_word', s: CAPS}
+    '&nav_home_pinky': {t: '^1 ^5', h: LGUI}
+    '&nav_home_ring': {t: '^2 ^6', h: LALT}
+    '&nav_home_middle': {t: '^4 ^8', h: LCTRL}
+    '&nav_home_index': {t: '^3 ^7', h: '⇧'}
     '&u_rgb_tog': {t: RGB TOG, s: RGB OFF}
     '&u_rgb_eff': {t: RGB EFF, s: RGB EFR}
     '&u_rgb_hui': {t: RGB HUI, s: RGB HUD}

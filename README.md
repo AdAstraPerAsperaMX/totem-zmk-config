@@ -43,10 +43,21 @@ Function keys, print screen, pause, and app/menu key.
 1. Fork this repository
 2. Enable GitHub Actions in your fork
 3. Modify `config/totem.keymap` as needed
-4. Push changes to trigger automatic firmware build
-5. Download firmware from Actions artifacts
-6. Flash `totem_left-seeeduino_xiao_ble-zmk.uf2` to left half
-7. Flash `totem_right-seeeduino_xiao_ble-zmk.uf2` to right half
+4. Install the local pre-push hook with `git config core.hooksPath .githooks`
+5. Push changes to trigger automatic firmware build
+6. Download firmware from Actions artifacts
+7. Flash `totem_left-seeeduino_xiao_ble-zmk.uf2` to left half
+8. Flash `totem_right-seeeduino_xiao_ble-zmk.uf2` to right half
+
+## Local Keymap Render Check
+
+Use `scripts/render-keymap.sh` to regenerate the checked-in keymap artifacts:
+
+- `keymap-drawer/totem.yaml`
+- `keymap-drawer/totem.svg`
+- `totem-keymap.svg`
+
+After running `git config core.hooksPath .githooks` once in your clone, every `git push` will run that render step first and abort if the generated files are out of date.
 
 ## ZMK Studio
 
