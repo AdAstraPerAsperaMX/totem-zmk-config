@@ -4,12 +4,3 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: ./.github/workflows/build-user-config-local.yml
-
-  draw:
-    if: github.event_name != 'pull_request'
-    uses: ./.github/workflows/draw-zmk-local.yml
-    permissions:
-      contents: write
-    with:
-      keymap_patterns: "config/*.keymap"
-      output_folder: "keymap-drawer"
