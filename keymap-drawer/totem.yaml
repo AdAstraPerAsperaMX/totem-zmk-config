@@ -144,11 +144,11 @@ layers:
   - {t: fun, h: toggle}
   - {t: trade, h: toggle}
   - ''
+  - ''
   - F21
   - F22
   - F23
   - F24
-  - ''
   - ''
   - {type: held}
   - ''
