@@ -139,7 +139,7 @@
             bindings = <
                 &kp Q              &kp W              &kp F              &kp P              &kp G              &kp J              &kp L              &kp U              &kp Y              &kp SQT
                 &hml LGUI A        &hml LALT R        &hml LCTRL S       &hml LSHFT T       &kp D              &kp H              &hmr RSHFT N       &hmr RCTRL E       &hmr RALT I        &hmr RGUI O
-                &none              &kp Z              &hml RALT X        &kp C              &kp V              &kp B              &kp K              &kp M              &kp COMMA          &hmr RALT DOT      &kp SLASH          &none
+                &kp LSHFT          &kp Z              &hml RALT X        &kp C              &kp V              &kp B              &kp K              &kp M              &kp COMMA          &hmr RALT DOT      &kp SLASH          &kp RSHFT
                                                        &u_lt TRADE ESC    &u_lt NAV SPACE    &u_lt MOUSE TAB    &u_lt SYM RET      &u_lt NUM BSPC     &u_lt FUN DEL
             >;
         };

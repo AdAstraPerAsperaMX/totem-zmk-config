@@ -21,7 +21,7 @@ layers:
   - {t: E, h: RCTRL}
   - {t: I, h: RALT}
   - {t: O, h: RGUI}
-  - ''
+  - ⇧
   - Z
   - {t: X, h: RALT}
   - C
@@ -32,7 +32,7 @@ layers:
   - ','
   - {t: ., h: RALT}
   - /
-  - ''
+  - RSHFT
   - {t: ESC, h: trade}
   - {t: ␣, h: nav}
   - {t: TAB, h: mouse}
