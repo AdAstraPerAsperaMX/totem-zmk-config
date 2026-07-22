@@ -29,10 +29,22 @@
         hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <280>;
+            /*
+             * Home-row mods tuned so a held key reliably becomes a modifier
+             * instead of repeating the letter (the "aaaa" misfire):
+             *   - flavor "balanced": triggers the hold as soon as another key
+             *     is pressed AND released while held, so fast chords still
+             *     register as mods (was "tap-preferred", which required
+             *     holding past the full tapping term first).
+             *   - require-prior-idle-ms 300 -> 120: previously any keypress
+             *     within 300ms forced a tap regardless of hold duration, so
+             *     reaching for a mod right after typing repeated the letter.
+             *   - tapping-term-ms 280 -> 200: quicker hold decision.
+             */
+            tapping-term-ms = <200>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <300>;
-            flavor = "tap-preferred";
+            require-prior-idle-ms = <120>;
+            flavor = "balanced";
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 35 36 37>;
             hold-trigger-on-release;
             bindings = <&kp>, <&kp>;
@@ -41,10 +53,11 @@
         hmr: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <280>;
+            /* See hml above for the rationale behind these values. */
+            tapping-term-ms = <200>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <300>;
-            flavor = "tap-preferred";
+            require-prior-idle-ms = <120>;
+            flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34>;
             hold-trigger-on-release;
             bindings = <&kp>, <&kp>;
@@ -175,8 +188,8 @@
 
         num_layer {
             bindings = <
-                &kp SLASH          &kp N7             &kp N8             &kp N9             &kp MINUS          &none              &to BASE           &none              &none              &none
-                &kp ASTRK          &kp N4             &kp N5             &kp N6             &kp PLUS           &none              &kp LSHFT          &kp LCTRL          &kp LALT           &kp LGUI
+                &kp ASTRK          &kp N7             &kp N8             &kp N9             &kp PLUS           &none              &to BASE           &none              &none              &none
+                &kp SLASH          &kp N4             &kp N5             &kp N6             &kp MINUS          &none              &kp LSHFT          &kp LCTRL          &kp LALT           &kp LGUI
                 &none              &kp EQUAL          &kp N1             &kp N2             &kp N3             &kp COMMA          &to NUM            &to NAV            &kp RALT           &none              &none              &none
                                                        &kp DOT            &kp N0             &kp UNDER          &none              &none              &none
             >;
@@ -185,9 +198,9 @@
         sym_layer {
             bindings = <
                 &kp GRAVE          &kp LBKT           &kp RBKT           &kp AT             &kp HASH           &none              &to BASE           &none              &none              &none
-                &kp EXCL           &kp LPAR           &kp RPAR           &kp AMPS           &kp PIPE           &none              &kp LSHFT          &kp LCTRL          &kp LALT           &kp LGUI
-                &kp BSLH           &kp TILDE          &kp LBRC           &kp RBRC           &kp DLLR           &kp PRCNT          &to SYM            &to MOUSE          &kp RALT           &none              &none              &none
-                                                       &kp SEMI           &kp UNDER          &kp CARET          &none              &none              &none
+                &kp EXCL           &kp LPAR           &kp RPAR           &kp AMPS           &kp PRCNT          &none              &kp LSHFT          &kp LCTRL          &kp LALT           &kp LGUI
+                &none              &kp TILDE          &kp LBRC           &kp RBRC           &kp DLLR           &kp PIPE           &to SYM            &to MOUSE          &kp RALT           &none              &none              &none
+                                                       &kp SEMI           &kp BSLH           &kp CARET          &none              &none              &none
             >;
         };
 
