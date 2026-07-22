@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+repo_root="$(git rev-parse --show-toplevel)"
+
+# Only regenerate when the keymap itself is part of this commit.
+if git diff --cached --name-only | grep -qx "config/totem.keymap"; then
+  "$repo_root/scripts/render-keymap.sh"
+
+  # Stage the regenerated artifacts so they land in the same commit,
+  # keeping the drawings in sync with the keymap (also satisfies pre-push).
+  git add \
+    "$repo_root/keymap-drawer/totem.yaml" \
+    "$repo_root/keymap-drawer/totem.svg" \
+    "$repo_root/totem-keymap.svg"
+fi
