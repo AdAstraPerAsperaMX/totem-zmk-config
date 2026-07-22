@@ -85,8 +85,8 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings
-                = <&kp LC(N4)>
-                , <&kp LC(N8)>
+                = <&kp LC(N3)>
+                , <&kp LC(N7)>
                 ;
         };
 
@@ -94,8 +94,8 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings
-                = <&kp LC(N3)>
-                , <&kp LC(N7)>
+                = <&kp LC(N4)>
+                , <&kp LC(N8)>
                 ;
         };
 
