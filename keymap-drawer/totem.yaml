@@ -66,11 +66,11 @@ layers:
   - {t: num, h: toggle}
   - {t: nav, h: toggle}
   - INS
+  - ''
   - HOME
   - PG UP
   - PG DN
   - END
-  - UNDO
   - ''
   - ''
   - {type: held}
@@ -105,11 +105,11 @@ layers:
   - {t: sym, h: toggle}
   - {t: mouse, h: toggle}
   - ''
+  - ''
   - WH←
   - WH↑
   - WH↓
   - WH→
-  - UNDO
   - ''
   - ''
   - ''

@@ -163,7 +163,7 @@
             bindings = <
                 &none              &none              &none              &to BASE           &none              &kp K_AGAIN        &kp LS(INS)        &kp LC(INS)        &kp LS(DEL)        &kp UNDO
                 NAV_PINKY(LGUI)    NAV_RING(LALT)     NAV_MIDDLE(LCTRL)  NAV_INDEX(LSHFT)   &none              &u_caps_word       &kp LEFT           &kp UP             &kp DOWN           &kp RIGHT
-                &none              &none              &kp RALT           &to NUM            &to NAV            &kp INS            &kp HOME           &kp PG_UP          &kp PG_DN          &kp END            &kp UNDO           &none
+                &none              &none              &kp RALT           &to NUM            &to NAV            &kp INS            &none              &kp HOME           &kp PG_UP          &kp PG_DN          &kp END            &none
                                                        &none              &none              &none              &kp RET            &kp BSPC           &kp DEL
             >;
         };
@@ -172,7 +172,7 @@
             bindings = <
                 &none              &none              &none              &to BASE           &bootloader        &kp K_AGAIN        &kp LS(INS)        &kp LC(INS)        &kp LS(DEL)        &kp UNDO
                 &kp LGUI           &kp LALT           &kp LCTRL          &kp LSHFT          &none              &none              &mmv MOVE_LEFT     &mmv MOVE_UP       &mmv MOVE_DOWN     &mmv MOVE_RIGHT
-                &none              &none              &kp RALT           &to SYM            &to MOUSE          &none              &msc SCRL_LEFT     &msc SCRL_UP       &msc SCRL_DOWN     &msc SCRL_RIGHT    &kp UNDO           &none
+                &none              &none              &kp RALT           &to SYM            &to MOUSE          &none              &none              &msc SCRL_LEFT     &msc SCRL_UP       &msc SCRL_DOWN     &msc SCRL_RIGHT    &none
                                                        &none              &none              &none              &mkp MB2           &mkp MB1           &mkp MB3
             >;
         };
