@@ -74,7 +74,7 @@ The menu bar app in `macos/TotemBattery` reads that port and shows `L 85%  R 72%
 
 Slot 0 is whichever half paired with the dongle first, so after a settings reset turn on the
 **left** half first. If the halves show up reversed, use **Swap Left/Right** in the menu.
-A ⚠︎ means one half isn't connected to the dongle; the red title means a half is at 15% or below.
+A ⚠︎ means one half isn't connected to the dongle; the title blinks red when a half is at 15% or below.
 
 ## Local Keymap Render Check
 

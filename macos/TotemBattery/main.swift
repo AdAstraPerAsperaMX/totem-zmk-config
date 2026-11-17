@@ -77,6 +77,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var probing: [String: SerialReader] = [:]
     private var state: BatteryState?
     private var lastUpdate: Date?
+    private var blinkTimer: Timer?
 
     private var swapped: Bool {
         get { UserDefaults.standard.bool(forKey: "swapHalves") }
@@ -158,9 +159,26 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             button.title = "L \(fmt(l))  R \(fmt(r))\(warn)"
             let low = [l, r].contains { $0 >= 0 && $0 <= 15 }
             button.contentTintColor = low ? .systemRed : nil
+            setBlinking(low)
         } else {
             button.title = "⌨︎ –"
             button.contentTintColor = nil
+            setBlinking(false)
+        }
+    }
+
+    // Pulse the menu bar readout while a half is low.
+    private func setBlinking(_ on: Bool) {
+        guard let button = statusItem.button else { return }
+        if on {
+            guard blinkTimer == nil else { return }
+            blinkTimer = Timer.scheduledTimer(withTimeInterval: 0.6, repeats: true) { _ in
+                button.alphaValue = button.alphaValue < 1 ? 1 : 0.2
+            }
+        } else {
+            blinkTimer?.invalidate()
+            blinkTimer = nil
+            button.alphaValue = 1
         }
     }
 
