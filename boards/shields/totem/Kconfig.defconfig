@@ -3,12 +3,35 @@ if SHIELD_TOTEM_LEFT
 config ZMK_KEYBOARD_NAME
     default "Totem"
 
+# Left is central by default (no dongle). The dongle build of the left
+# half overrides this with -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n in build.yaml.
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_RIGHT
+if SHIELD_TOTEM_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "Totem"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+# Both halves connect to the dongle as peripherals.
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
+
+# 5 host profiles + 2 peripherals.
+config BT_MAX_CONN
+    default 7
+
+config BT_MAX_PAIRED
+    default 7
+
+endif
+
+if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_RIGHT || SHIELD_TOTEM_DONGLE
 
 config ZMK_SPLIT
     default y

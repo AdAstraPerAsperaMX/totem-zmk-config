@@ -1,0 +1,37 @@
+/*
+ * Copyright (c) 2022 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "totem.dtsi"
+
+/* The dongle has no keys: swap the GPIO matrix for a mock kscan,
+ * but keep the shared matrix transform and physical layout so
+ * totem.keymap (and ZMK Studio) work unchanged. */
+/delete-node/ &kscan0;
+
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+        zmk,battery-serial = &battery_serial;
+    };
+
+    mock_kscan: mock_kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+};
+
+&totem_physical_layout {
+    kscan = <&mock_kscan>;
+};
+
+/* USB serial port for battery reporting (see src/battery_serial.c). */
+&zephyr_udc0 {
+    battery_serial: battery_serial {
+        compatible = "zephyr,cdc-acm-uart";
+    };
+};

@@ -1,9 +1,22 @@
 include:
+  # --- Standalone mode (left half is central, no dongle) ---
   - board: seeeduino_xiao_ble
     shield: totem_left
     # Uncomment to enable ZMK Studio on the central half.
     # snippet: studio-rpc-usb-uart
   - board: seeeduino_xiao_ble
     shield: totem_right
+
+  # --- Dongle mode (dongle is central, both halves are peripherals) ---
+  - board: seeeduino_xiao_ble
+    shield: totem_dongle
+    # Uncomment to enable ZMK Studio on the dongle.
+    # snippet: studio-rpc-usb-uart
+  - board: seeeduino_xiao_ble
+    shield: totem_left
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: totem_left_peripheral-seeeduino_xiao_ble-zmk
+  # The right half firmware is identical in both modes.
+
   - board: seeeduino_xiao_ble
     shield: settings_reset

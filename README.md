@@ -49,6 +49,33 @@ Function keys, print screen, pause, and app/menu key.
 7. Flash `totem_left-seeeduino_xiao_ble-zmk.uf2` to left half
 8. Flash `totem_right-seeeduino_xiao_ble-zmk.uf2` to right half
 
+### Dongle mode
+
+A third XIAO BLE can act as a USB dongle (central), with both halves as peripherals.
+That way the halves only talk BLE to the dongle, which saves battery on the left half.
+
+1. Flash `settings_reset-seeeduino_xiao_ble-zmk.uf2` to **all three** boards (dongle, left, right) to clear old pairings
+2. Flash `totem_dongle-seeeduino_xiao_ble-zmk.uf2` to the dongle
+3. Flash `totem_left_peripheral-seeeduino_xiao_ble-zmk.uf2` to the left half
+4. Flash `totem_right-seeeduino_xiao_ble-zmk.uf2` to the right half
+5. Plug the dongle into the computer and power on both halves; they pair to it automatically
+
+To go back to standalone mode, settings-reset all boards and flash the normal left/right firmware.
+
+#### Battery levels on macOS (TotemBattery)
+
+macOS can't show a USB keyboard's battery, so the dongle also exposes a small USB serial port
+and writes `ZMKBAT <slot0> <slot1> <connected>` lines to it every 5 s (`src/battery_serial.c`).
+The menu bar app in `macos/TotemBattery` reads that port and shows `L 85%  R 72%`.
+
+1. Build it: `macos/TotemBattery/build.sh` (needs the Xcode command line tools)
+2. Move `macos/TotemBattery/TotemBattery.app` to `/Applications` and open it
+3. Optional: enable **Open at Login** from its menu
+
+Slot 0 is whichever half paired with the dongle first, so after a settings reset turn on the
+**left** half first. If the halves show up reversed, use **Swap Left/Right** in the menu.
+A ⚠︎ means one half isn't connected to the dongle; the red title means a half is at 15% or below.
+
 ## Local Keymap Render Check
 
 Use `scripts/render-keymap.sh` to regenerate the checked-in keymap artifacts:

@@ -1,0 +1,16 @@
+config ZMK_BATTERY_SERIAL_REPORT
+    bool "Report split peripheral battery levels over a USB CDC ACM serial port"
+    depends on ZMK_SPLIT_ROLE_CENTRAL
+    depends on ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
+    depends on SERIAL
+    help
+      Periodically writes "ZMKBAT <slot0> <slot1> <connected>" lines to the UART
+      chosen as zmk,battery-serial. Read by the TotemBattery macOS menu bar app.
+
+if ZMK_BATTERY_SERIAL_REPORT
+
+config ZMK_BATTERY_SERIAL_REPORT_INTERVAL_MS
+    int "Interval between reports in milliseconds"
+    default 5000
+
+endif
